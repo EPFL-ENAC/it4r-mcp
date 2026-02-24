@@ -1,6 +1,6 @@
 # EPFL ENAC IT4R MCP
 
-A [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) server to interact with a ENAC IT4R using natural language.
+A [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) server to interact with ENAC IT4R using natural language.
 
 ## Installation
 
