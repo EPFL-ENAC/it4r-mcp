@@ -57,7 +57,7 @@ Verify that the MCP is operational:
 opencode mcp list
 ```
 
-Start OpenCode and list servers available, open connection, assign tables etc.:
+Start OpenCode and use prompts etc.:
 
 ```sh
 opencode
