@@ -5,23 +5,23 @@ from mcp.server.fastmcp import FastMCP
 # Create an MCP server
 mcp = FastMCP("IT4R", json_response=True)
 
-PICO_METHODOLOGY_PATH = Path(__file__).parent / "docs" / "datashield-pico.md"
+# Placeholder: replace with your own domain documentation
+METHODOLOGY_PATH = Path(__file__).parent / "docs" / "methodology.md"
 
 
 @mcp.prompt()
-def pico_methodology() -> str:
-    """PICO methodology guide for DataSHIELD analysis."""
-    return PICO_METHODOLOGY_PATH.read_text()
+def methodology() -> str:
+    """Placeholder prompt: methodology guide for the agent."""
+    return METHODOLOGY_PATH.read_text()
 
 
 @mcp.tool()
-def get_analysis_methodology() -> str:
+def get_methodology() -> str:
     """
-    Returns the recommended methodology for conducting a DataSHIELD analysis.
-    Call this at the start of any analysis session to understand the PICO framework
-    and the correct sequence of operations.
+    Placeholder tool: returns the recommended methodology.
+    Call this at the start of any session to understand the expected workflow.
     """
-    return PICO_METHODOLOGY_PATH.read_text()
+    return METHODOLOGY_PATH.read_text()
 
 
 def main() -> None:
