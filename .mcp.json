@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "it4r": {
+      "command": "uv",
+      "args": ["run", "src/it4r_mcp/server.py"]
+    }
+  }
+}

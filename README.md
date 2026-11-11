@@ -16,15 +16,17 @@ make install
 
 ## Usage
 
-Use [OpenCode](https://opencode.ai/docs/) as the AI agent prompt interface.
+Use [OpenCode](https://opencode.ai/docs/) or [Claude Code](https://code.claude.com/docs/) as the AI agent prompt interface.
 
-### From any folder
-
-Install the IT4R MCP tool using `uv`:
+To use the MCP server from any folder, first install the IT4R MCP tool using `uv`:
 
 ```sh
 uv tool install git+ssh://git@github.com/EPFL-ENAC/it4r-mcp
 ```
+
+### OpenCode
+
+#### From any folder
 
 Set up the `opencode.json` as follows:
 
@@ -47,7 +49,7 @@ And verify it is working:
 opencode mcp list
 ```
 
-### From this project
+#### From this project
 
 Use OpenCode from this project folder: the IT4R MCP server is declared in the `opencode.json` configuration file.
 
@@ -61,6 +63,32 @@ Start OpenCode and use prompts etc.:
 
 ```sh
 opencode
+```
+
+### Claude Code
+
+#### From any folder
+
+Register the installed IT4R MCP tool (use `--scope project` to write it to the folder's `.mcp.json` instead of your user settings):
+
+```sh
+claude mcp add --scope user it4r -- it4r-mcp
+```
+
+And verify it is working:
+
+```sh
+claude mcp list
+```
+
+#### From this project
+
+Use Claude Code from this project folder: the IT4R MCP server is declared in the `.mcp.json` configuration file (approve it when prompted on first start).
+
+Start Claude Code and verify that the MCP is operational with the `/mcp` command:
+
+```sh
+claude
 ```
 
 ## Development
